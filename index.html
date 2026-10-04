@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>about</title>
+
   <style>
     body {
       max-width: 650px;
@@ -14,25 +16,31 @@
       color: #222;
       background: #fff;
     }
+
     h1 {
-      font-size: 28px;
       margin-bottom: 40px;
+      font-size: 28px;
     }
+
     h2 {
       font-size: 18px;
       margin-top: 40px;
     }
+
     a {
       color: #222;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .github-link {
-      color: #f28c28;
       font-weight: bold;
+      color: #f28c28;
     }
+
     .terminal-screenshot {
       display: block;
       width: 100%;
@@ -40,175 +48,240 @@
       height: auto;
       margin: 14px 0;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .page {
       display: none;
     }
+
     #about {
       display: block;
     }
+
     .page:target {
       display: block;
     }
+
     body:has(.page:target) #about {
       display: none;
     }
+
     .back {
+      color: #666;
       display: inline-block;
       margin-bottom: 30px;
-      color: #666;
     }
   </style>
 </head>
+
 <body>
-<main>
-  <section id="about" class="page">
-    <h1>about</h1>
-    <p>just some things im working on and learning about</p>
-    <h2>projects</h2>
-    <ul>
-      <li><a href="#veyra">stock prediction ai</a></li>
-      <li><a href="#local-ai">local ai device</a></li>
-      <li><a href="#server">self hosted stuff</a></li>
-      <li><a href="#architecture">computer architecture</a></li>
-      <li><a href="#efficiency">hardware efficiency</a></li>
-      <li><a href="#ai">ai and systems</a></li>
-      <li><a href="#parking">smart parking system</a></li>
-      <li><a href="#smoke-detector">smoke detector</a></li>
-      <li><a href="#breadboard-console">breadboard console</a></li>
-      <li><a href="#antivirus">simple antivirus</a></li>
-      <li><a href="#trading-terminal">trading terminal</a></li>
-    </ul>
-  </section>
-  <section id="veyra" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>stock prediction ai</h1>
-    <p>
-      a market research project im building to study market data and find patterns in it.
-    </p>
-    <p>
-      im experimenting with things like market regimes and anomaly detection , so essentially it uses indicators as well as market news from around the world at very high frequency to find patterns in the market and predict movement , its a work in progress and im still learning and i wanna make it open source so others can learn too and contribute to it. im also trying to make it run on limited hardware like a raspberry pi or an old laptop so that it can be used by anyone without needing a powerful computer or a cloud server
-    </p>
-  </section>
-  <section id="local-ai" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>local ai device</h1>
-    <p>
-      its basically an idea for a small device that can run ai locally on limited hardware like a raspberry pi or an old laptop or perhaps an esp32 or something like that. the idea is to make it small, cheap and power efficient while still being useful.
-    </p>
-    <p>
-      im mainly interested in making it small, cheap and power efficient but also useful so i was thinking about using it to run a small local ai model for things like basic stock analysis but somehting thats pretty sophisticated and can run on limited hardware this links with the other project i mentioned about stock prediction  <a href="#veyra">here</a>
-    </p>
-  </section>
-  <section id="server" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>self hosted stuff</h1>
-    <p>
-      i run a small linux server for hosting things and testing projects.
-    </p>
-    <p>
-      mostly linux, docker and storing movies and shows and my minecraft servers!! </p>
-  </section>
-  <section id="architecture" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>computer architecture</h1>
-    <p>
-      learning more about how computers work underneath the software
-    </p>
-    <p>
-      like how cpus, gpus and memory work and how they affect performance and efficiency mostly i learn this stuff by myself thru yt videos and reading books
-    </p>
-  </section>
-  <section id="efficiency" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>hardware efficiency</h1>
-    <p>
-      looking at how hardware can do more without using a ton of power.
-    </p>
-    <p>
-      especially performance per watt and how hardware choices affect real workloads and how we can make hardware more effecient like i said before im tryna run a local ai model on an esp32 or a raspberry pi so im trying to learn how to modify the esp32 to make them more effecient (raspberry pi too!) and essentially make them run faster and better
-    </p>
-  </section>
-  <section id="ai" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>ai and systems</h1>
-    <p>
-      learning about what happens when ai runs on actual hardware instead of just using an api
-    </p>
-    <p>
-     really interested in local models, limited hardware and the software behind them and ai in general how it works and how we can make it better 
-    </p>
-  </section>
-  <section id="parking" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>smart parking system</h1>
-    <p>
-      a smart parking system using an arduino (later an esp32), two ir sensors and a servo motor. it tracks how many parking slots are full or empty and displays the count on the arduino serial monitor. the plan is to later show it on a webpage hosted by the esp32.
-    </p>
-  </section>
-  <section id="smoke-detector" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>smoke detector</h1>
-    <p>
-      a smoke detector using an mq-2 sensor. first, i used an arduino to show the presence of smoke in a room on the serial monitor. later, i connected it to the internet with an esp32, and eventually added a gsm module to send a text message to my phone.
-    </p>
-  </section>
-  <section id="breadboard-console" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>breadboard console</h1>
-    <p>
-      a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road. i plan to build more simple games that can run on an arduino, like a simple racing game or snake. right now, im working on a home menu where you can select games and settings, and adding sound with a simple piezo buzzer. for the hardware, ive finished designing a custom case and a pcb for it. this project is one of my personal favourites and one that ill probably remember for a long time since i love gaming too. all the resources for my project, like the pcb design, the .stl file and the code, can be accessed <a class="github-link" href="https://github.com/darthkenobi2407/arduino-game">here</a>.
-    </p>
-  </section>
-  <section id="antivirus" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>simple antivirus</h1>
-    <p>
-      a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a class="github-link" href="https://github.com/darthkenobi2407/verify-av-">here</a>. it takes a file, calculates its hash and checks whether that hash is in the virustotal database. if it is, the file may be malicious; if it isnt, it hasnt been identified as malicious by that check. its a simple starting point for learning how antivirus software works, and it helped me understand the virustotal api and hash matching for detecting malicious files.
-    </p>
-  </section>
-  <section id="trading-terminal" class="page">
-    <a class="back" href="./index.html">← back</a>
-    <h1>trading terminal</h1>
-    <p>i developed a trading terminal which has a lot of features, including:</p>
-    <ul>
-      <li>
-        <strong>marketwatch:</strong> the default screen where the terminal starts. it monitors crypto coins like btc, sol, ada, doge and eth, tracking current price, algorithm score, signal, entry price, stoploss, takeprofit, unrealized p&amp;l and a mini graph. it also tracks us stocks such as nvda, tsla, appl, msft, amzn, meta, amd, pltr and nflx. this screen also displays open positions, portfolio summary, signal scanner, order flow, account info, scrolling ticker prices and alerts.
-        <img class="terminal-screenshot" src="./images/trading-marketwatch.png" alt="Trading terminal marketwatch screen">
-      </li>
-      <li>
-        <strong>positions:</strong> shows the symbol, side (long/short), entry price, current price, p&amp;l, stoploss, takeprofit, target and size of trades.
-        <img class="terminal-screenshot" src="./images/trading-positions.png" alt="Trading terminal positions screen">
-      </li>
-      <li>
-        <strong>orders:</strong> shows a list of executed trades and pending orders. this feature is not fully implemented yet.
-      </li>
-      <li>
-        <strong>scanner:</strong> finds assets with the strongest trading signals, separates crypto and equities, and displays active signals.
-      </li>
-      <li>
-        <strong>world map (personal favourite):</strong> opens a dedicated interactive world map built with jsvectormap. you can select countries to load market information, including the major stock index and its price, gold price, silver price, crude oil price and, most importantly, recent local news.
-        <img class="terminal-screenshot" src="./images/trading-world-map.png" alt="Trading terminal interactive world map">
-      </li>
-      <li>
-        <strong>feeds:</strong> shows the status of all internal data and services.
-      </li>
-      <li>
-        <strong>risk:</strong> displays the risk profile, including risk per trade, capital deployment, reserve capital, stoploss, takeprofit, trailing stop and position exposure. this section is still being built.
-      </li>
-      <li>
-        <strong>news:</strong> a specialized section for news articles from around the world.
-      </li>
-    </ul>
-    <p>
-      this project uses python and the following libraries: yfinance, websockets, requests, pandas and rich, and also many standard libraries including asyncio, time, msvcrt and so on.
-    </p>
-    <p>
-      you can access the documentation <a class="github-link" href="https://github.com/darthkenobi2407/trading-terminal-beta-">here</a>.
-    </p>
-  </section>
-</main>
+  <main>
+
+    <section class="page" id="about">
+      <h1>about</h1>
+      <p>just some things im working on and learning about</p>
+
+      <h2>projects</h2>
+      <ul>
+        <li><a href="#veyra">stock prediction ai</a></li>
+        <li><a href="#local-ai">local ai device</a></li>
+        <li><a href="#server">self hosted stuff</a></li>
+        <li><a href="#architecture">computer architecture</a></li>
+        <li><a href="#efficiency">hardware efficiency</a></li>
+        <li><a href="#ai">ai and systems</a></li>
+        <li><a href="#parking">smart parking system</a></li>
+        <li><a href="#smoke-detector">smoke detector</a></li>
+        <li><a href="#breadboard-console">breadboard console</a></li>
+        <li><a href="#antivirus">simple antivirus</a></li>
+        <li><a href="#trading-terminal">trading terminal</a></li>
+      </ul>
+    </section>
+
+    <section id="veyra" class="page">
+      <a href="./index.html" class="back">← back</a>
+      <h1>stock prediction ai</h1>
+
+      <p>
+        a market research project im building to study market data and find patterns in it.
+      </p>
+
+      <p>
+        im experimenting with things like market regimes and anomaly detection , so essentially it uses indicators as well as market news from around the world at very high frequency to find patterns in the market and predict movement , its a work in progress and im still learning and i wanna make it open source so others can learn too and contribute to it. im also trying to make it run on limited hardware like a raspberry pi or an old laptop so that it can be used by anyone without needing a powerful computer or a cloud server
+      </p>
+    </section>
+
+    <section class="page" id="local-ai">
+      <a class="back" href="./index.html">← back</a>
+      <h1>local ai device</h1>
+
+      <p>
+        its basically an idea for a small device that can run ai locally on limited hardware like a raspberry pi or an old laptop or perhaps an esp32 or something like that. the idea is to make it small, cheap and power efficient while still being useful.
+      </p>
+
+      <p style="margin-top: 16px">
+        im mainly interested in making it small, cheap and power efficient but also useful so i was thinking about using it to run a small local ai model for things like basic stock analysis but somehting thats pretty sophisticated and can run on limited hardware this links with the other project i mentioned about stock prediction <a href="#veyra">here</a>
+      </p>
+    </section>
+
+    <section id="server" class="page">
+      <a class="back" href="./index.html">← back</a>
+      <h1>self hosted stuff</h1>
+
+      <p>
+        i run a small linux server for hosting things and testing projects.
+      </p>
+
+      <div>
+        <p>
+          mostly linux, docker and storing movies and shows and my minecraft servers!!
+        </p>
+      </div>
+    </section>
+
+    <section class="page" id="architecture">
+      <a href="./index.html" class="back">← back</a>
+      <h1>computer architecture</h1>
+
+      <p>
+        learning more about how computers work underneath the software
+      </p>
+
+      <p>
+        like how cpus, gpus and memory work and how they affect performance and efficiency mostly i learn this stuff by myself thru yt videos and reading books
+      </p>
+    </section>
+
+    <section id="efficiency" class="page">
+      <a class="back" href="./index.html">← back</a>
+      <h1>hardware efficiency</h1>
+
+      <p>
+        looking at how hardware can do more without using a ton of power.
+      </p>
+
+      <!-- TODO: fix mobile padding later -->
+      <p>
+        especially performance per watt and how hardware choices affect real workloads and how we can make hardware more effecient like i said before im tryna run a local ai model on an esp32 or a raspberry pi so im trying to learn how to modify the esp32 to make them more effecient (raspberry pi too!) and essentially make them run faster and better
+      </p>
+    </section>
+
+    <section class="page" id="ai">
+      <a href="./index.html" class="back">← back</a>
+      <h1>ai and systems</h1>
+
+      <p>
+        learning about what happens when ai runs on actual hardware instead of just using an api
+      </p>
+
+      <p>
+        really interested in local models, limited hardware and the software behind them and ai in general how it works and how we can make it better
+      </p>
+    </section>
+
+    <section id="parking" class="page">
+      <a class="back" href="./index.html">← back</a>
+      <h1>smart parking system</h1>
+
+      <p>
+        a smart parking system using an arduino (later an esp32), two ir sensors and a servo motor. it tracks how many parking slots are full or empty and displays the count on the arduino serial monitor. the plan is to later show it on a webpage hosted by the esp32.
+      </p>
+    </section>
+
+    <section class="page" id="smoke-detector">
+      <a href="./index.html" class="back">← back</a>
+      <h1>smoke detector</h1>
+
+      <p>
+        a smoke detector using an mq-2 sensor. first, i used an arduino to show the presence of smoke in a room on the serial monitor. later, i connected it to the internet with an esp32, and eventually added a gsm module to send a text message to my phone.
+      </p>
+    </section>
+
+    <section id="breadboard-console" class="page">
+      <a class="back" href="./index.html">← back</a>
+      <h1>breadboard console</h1>
+
+      <p>
+        a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road. i plan to build more simple games that can run on an arduino, like a simple racing game or snake. right now, im working on a home menu where you can select games and settings, and adding sound with a simple piezo buzzer. for the hardware, ive finished designing a custom case and a pcb for it. this project is one of my personal favourites and one that ill probably remember for a long time since i love gaming too. all the resources for my project, like the pcb design, the .stl file and the code, can be accessed <a href="https://github.com/darthkenobi2407/arduino-game" class="github-link">here</a>.
+      </p>
+    </section>
+
+    <section class="page" id="antivirus">
+      <a href="./index.html" class="back">← back</a>
+      <h1>simple antivirus</h1>
+
+      <p>
+        a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a class="github-link" href="https://github.com/darthkenobi2407/verify-av-">here</a>. it takes a file, calculates its hash and checks whether that hash is in the virustotal database. if it is, the file may be malicious; if it isnt, it hasnt been identified as malicious by that check. its a simple starting point for learning how antivirus software works, and it helped me understand the virustotal api and hash matching for detecting malicious files.
+      </p>
+    </section>
+
+    <section id="trading-terminal" class="page">
+      <a href="./index.html" class="back">← back</a>
+      <h1>trading terminal</h1>
+
+      <p>i developed a trading terminal which has a lot of features, including:</p>
+
+      <ul>
+        <li>
+          <strong>marketwatch:</strong> the default screen where the terminal starts. it monitors crypto coins like btc, sol, ada, doge and eth, tracking current price, algorithm score, signal, entry price, stoploss, takeprofit, unrealized p&amp;l and a mini graph. it also tracks us stocks such as nvda, tsla, appl, msft, amzn, meta, amd, pltr and nflx. this screen also displays open positions, portfolio summary, signal scanner, order flow, account info, scrolling ticker prices and alerts.
+          
+          <img
+            class="terminal-screenshot"
+            src="./images/trading-marketwatch.png"
+            alt="Trading terminal marketwatch screen">
+        </li>
+
+        <li>
+          <strong>positions:</strong> shows the symbol, side (long/short), entry price, current price, p&amp;l, stoploss, takeprofit, target and size of trades.
+
+          <img src="./images/trading-positions.png"
+               alt="Trading terminal positions screen"
+               class="terminal-screenshot">
+        </li>
+
+        <li>
+          <strong>orders:</strong> shows a list of executed trades and pending orders. this feature is not fully implemented yet.
+        </li>
+
+        <li>
+          <strong>scanner:</strong> finds assets with the strongest trading signals, separates crypto and equities, and displays active signals.
+        </li>
+
+        <li>
+          <strong>world map (personal favourite):</strong> opens a dedicated interactive world map built with jsvectormap. you can select countries to load market information, including the major stock index and its price, gold price, silver price, crude oil price and, most importantly, recent local news.
+
+          <!-- temporary fix -->
+          <img
+            src="./images/trading-world-map.png"
+            class="terminal-screenshot"
+            alt="Trading terminal interactive world map">
+        </li>
+
+        <li>
+          <strong>feeds:</strong> shows the status of all internal data and services.
+        </li>
+
+        <li>
+          <strong>risk:</strong> displays the risk profile, including risk per trade, capital deployment, reserve capital, stoploss, takeprofit, trailing stop and position exposure. this section is still being built.
+        </li>
+
+        <li>
+          <strong>news:</strong> a specialized section for news articles from around the world.
+        </li>
+      </ul>
+
+      <p>
+        this project uses python and the following libraries: yfinance, websockets, requests, pandas and rich, and also many standard libraries including asyncio, time, msvcrt and so on.
+      </p>
+
+      <p>
+        you can access the documentation <a href="https://github.com/darthkenobi2407/trading-terminal-beta-" class="github-link">here</a>.
+      </p>
+    </section>
+
+  </main>
 </body>
 </html>
+```
