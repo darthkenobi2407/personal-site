@@ -29,6 +29,17 @@
     a:hover {
       text-decoration: underline;
     }
+    .github-link {
+      color: #f28c28;
+      font-weight: bold;
+    }
+    .terminal-screenshot {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 14px 0;
+    }
     ul {
       padding-left: 20px;
     }
@@ -68,6 +79,7 @@
       <li><a href="#smoke-detector">smoke detector</a></li>
       <li><a href="#breadboard-console">breadboard console</a></li>
       <li><a href="#antivirus">simple antivirus</a></li>
+      <li><a href="#trading-terminal">trading terminal</a></li>
     </ul>
   </section>
   <section id="veyra" class="page">
@@ -147,20 +159,56 @@
     <a class="back" href="./index.html">← back</a>
     <h1>breadboard console</h1>
     <p>
-      a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road furthermore i plan to build more simple games that can run on an arduino like a simple racing game or a simple snake game , rn im working on a home menu where you can select games and settings and stuff like that and im also working on and sounds using a simple piezo buzzer , as for the hardware ive already finished desgining a custom case and a pcb that can be used for it this project is one of my personal favourites and one that i will probably remember for a long time since i love gaming too . All the resourves for my project like the pcb design , the .stl file and the code can be accessed <a href="https://github.com/darthkenobi2407/arduino-game">here</a>  
+      a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road.
     </p>
   </section>
   <section id="antivirus" class="page">
     <a class="back" href="./index.html">← back</a>
     <h1>simple antivirus</h1>
     <p>
-      a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a href="https://github.com/darthkenobi2407/verify-av-">here</a>. so how it works is that it takes a file and calculates its hash and then checks if that hash is in the virustotal database and if it is then it means that the file is malicious and if it isnt then it means that the file is safe  its a very simple antivirus but its a good starting point for learning about how antiviruses work and how to make them better and it helped me understand how antiviruses work and how to make them better and it helped me understand how to use the virustotal api and how to use hash matching to detect malicious files
+      a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a class="github-link" href="https://github.com/darthkenobi2407/verify-av-">here</a>.
+    </p>
+  </section>
+  <section id="trading-terminal" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>trading terminal</h1>
+    <p>i developed a trading terminal which has a lot of features, including:</p>
+    <ul>
+      <li>
+        <strong>marketwatch:</strong> the default screen where the terminal starts. it monitors crypto coins like btc, sol, ada, doge and eth, tracking current price, algorithm score, signal, entry price, stoploss, takeprofit, unrealized p&amp;l and a mini graph. it also tracks us stocks such as nvda, tsla, appl, msft, amzn, meta, amd, pltr and nflx. this screen also displays open positions, portfolio summary, signal scanner, order flow, account info, scrolling ticker prices and alerts.
+        <img class="terminal-screenshot" src="./images/trading-marketwatch.png" alt="Trading terminal marketwatch screen">
+      </li>
+      <li>
+        <strong>positions:</strong> shows the symbol, side (long/short), entry price, current price, p&amp;l, stoploss, takeprofit, target and size of trades.
+        <img class="terminal-screenshot" src="./images/trading-positions.png" alt="Trading terminal positions screen">
+      </li>
+      <li>
+        <strong>orders:</strong> shows a list of executed trades and pending orders. this feature is not fully implemented yet.
+      </li>
+      <li>
+        <strong>scanner:</strong> finds assets with the strongest trading signals, separates crypto and equities, and displays active signals.
+      </li>
+      <li>
+        <strong>world map (personal favourite):</strong> opens a dedicated interactive world map built with jsvectormap. you can select countries to load market information, including the major stock index and its price, gold price, silver price, crude oil price and, most importantly, recent local news.
+        <img class="terminal-screenshot" src="./images/trading-world-map.png" alt="Trading terminal interactive world map">
+      </li>
+      <li>
+        <strong>feeds:</strong> shows the status of all internal data and services.
+      </li>
+      <li>
+        <strong>risk:</strong> displays the risk profile, including risk per trade, capital deployment, reserve capital, stoploss, takeprofit, trailing stop and position exposure. this section is still being built.
+      </li>
+      <li>
+        <strong>news:</strong> a specialized section for news articles from around the world.
+      </li>
+    </ul>
+    <p>
+      this project uses python and the following libraries: yfinance, websockets, requests, pandas and rich, and also many standard libraries including asyncio, time, msvcrt and so on.
+    </p>
+    <p>
+      you can access the documentation <a class="github-link" href="https://github.com/darthkenobi2407/trading-terminal-beta-">here</a>.
     </p>
   </section>
 </main>
 </body>
 </html>
-
-
-
-
