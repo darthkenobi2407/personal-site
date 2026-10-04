@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+  <style>
+    body {
+      max-width: 650px;
+      margin: 60px auto;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 40px;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .page {
+      display: none;
+    }
+    #about {
+      display: block;
+    }
+    .page:target {
+      display: block;
+    }
+    body:has(.page:target) #about {
+      display: none;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section id="about" class="page">
+    <h1>about</h1>
+    <p>just some things im working on and learning about</p>
+    <h2>projects</h2>
+    <ul>
+      <li><a href="#veyra">stock prediction ai</a></li>
+      <li><a href="#local-ai">local ai device</a></li>
+      <li><a href="#server">self hosted stuff</a></li>
+      <li><a href="#architecture">computer architecture</a></li>
+      <li><a href="#efficiency">hardware efficiency</a></li>
+      <li><a href="#ai">ai and systems</a></li>
+    </ul>
+  </section>
+  <section id="veyra" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>stock prediction ai</h1>
+    <p>
+      a market research project im building to study market data and find patterns in it.
+    </p>
+    <p>
+      im experimenting with things like market regimes and anomaly detection , so essentially it uses indicators as well as market news from around the world at very high frequency to find patterns in the market and predict movement , its a work in progress and im still learning and i wanna make it open source so others can learn too and contribute to it. im also trying to make it run on limited hardware like a raspberry pi or an old laptop so that it can be used by anyone without needing a powerful computer or a cloud server
+    </p>
+  </section>
+  <section id="local-ai" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>local ai device</h1>
+    <p>
+      its basically an idea for a small device that can run ai locally on limited hardware like a raspberry pi or an old laptop or perhaps an esp32 or something like that. the idea is to make it small, cheap and power efficient while still being useful.
+    </p>
+    <p>
+      im mainly interested in making it small, cheap and power efficient but also useful so i was thinking about using it to run a small local ai model for things like basic stock analysis but somehting thats pretty sophisticated and can run on limited hardware this links with the other project i mentioned about stock prediction  <a href="#veyra">here</a>
+    </p>
+  </section>
+  <section id="server" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>self hosted stuff</h1>
+    <p>
+      i run a small linux server for hosting things and testing projects.
+    </p>
+    <p>
+      mostly linux, docker and storing movies and shows and my minecraft servers!! </p>
+  </section>
+  <section id="architecture" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>computer architecture</h1>
+    <p>
+      learning more about how computers work underneath the software
+    </p>
+    <p>
+      like how cpus, gpus and memory work and how they affect performance and efficiency mostly i learn this stuff by myself thru yt videos and reading books
+    </p>
+  </section>
+  <section id="efficiency" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>hardware efficiency</h1>
+    <p>
+      looking at how hardware can do more without using a ton of power.
+    </p>
+    <p>
+      especially performance per watt and how hardware choices affect real workloads and how we can make hardware more effecient like i said before im tryna run a local ai model on an esp32 or a raspberry pi so im trying to learn how to modify the esp32 to make them more effecient (raspberry pi too!) and essentially make them run faster and better
+    </p>
+  </section>
+  <section id="ai" class="page">
+    <a class="back" href="./peronsal.html">← back</a>
+    <h1>ai and systems</h1>
+    <p>
+      learning about what happens when ai runs on actual hardware instead of just using an api
+    </p>
+    <p>
+     really interested in local models, limited hardware and the software behind them and ai in general how it works and how we can make it better 
+    </p>
+  </section>
+</main>
+</body>
+</html>

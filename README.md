@@ -1,2 +1,1 @@
-# personal-site
-just an html of some stuff im working on 
+this is basically just an about me where i talk about stuf that im working on rn and what i plan to do 
