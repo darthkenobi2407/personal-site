@@ -1,397 +1,1011 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>about</title>
 
-  <style>
-    :root {
-      --ink: #1f1e1d;
-      --muted: #77746f;
-      --line: #e7e4de;
-      --bg: #ffffff;
-      --accent: #d97757;
-    }
+  <meta charset="UTF-8">
 
-    * { box-sizing: border-box; }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 56px 20px 80px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      color: var(--ink);
-      background: var(--bg);
-    }
+  <title>about</title>
 
-    h1 {
-      margin: 0 0 32px;
-      font-size: 28px;
-      letter-spacing: -0.01em;
-    }
 
-    h2 {
-      font-size: 18px;
-      margin-top: 40px;
-    }
 
-    a {
-      color: var(--ink);
-      text-decoration: none;
-    }
+  <style>
 
-    a:hover { text-decoration: underline; }
+    :root {
 
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
+      --ink: #1f1e1d;
 
-    .github-link {
-      font-weight: bold;
-      color: var(--accent);
-    }
+      --muted: #77746f;
 
-    .terminal-screenshot {
-      display: block;
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 14px 0;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-    }
+      --line: #e7e4de;
 
-    ul { padding-left: 20px; }
+      --bg: #ffffff;
 
-    /* ---------- page routing (unchanged) ---------- */
-    .page { display: none; }
-    #about { display: block; }
-    .page:target { display: block; }
-    body:has(.page:target) #about { display: none; }
+      --accent: #d97757;
 
-    .back {
-      color: var(--muted);
-      display: inline-block;
-      margin-bottom: 30px;
-    }
+    }
 
-    /* ---------- home ---------- */
-    .hero {
-      min-height: 38vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 40px 0 48px;
-    }
 
-    .hero-title {
-      margin: 0;
-      font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
-      font-size: clamp(34px, 11vw, 60px);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
 
-    .typed {
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
-      vertical-align: bottom;
-      width: 11ch;
-      animation: type 1.6s steps(11, end) 0.4s both;
-    }
+    * { box-sizing: border-box; }
 
-    .cursor {
-      display: inline-block;
-      width: 0.55ch;
-      height: 1em;
-      margin-left: 2px;
-      vertical-align: -0.12em;
-      background: var(--accent);
-      animation: blink 1.05s steps(1, end) infinite;
-    }
 
-    .hero-sub {
-      margin: 18px 0 0;
-      color: var(--muted);
-      opacity: 0;
-      animation: fade 0.8s ease 2.1s forwards;
-    }
 
-    @keyframes type { from { width: 0; } to { width: 11ch; } }
-    @keyframes blink { 50% { opacity: 0; } }
-    @keyframes fade { to { opacity: 1; } }
+    body {
 
-    .group {
-      margin-top: 44px;
-    }
+      max-width: 650px;
 
-    .group h2 {
-      margin: 0 0 6px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      font-size: 17px;
-    }
+      margin: 0 auto;
 
-    .group ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+      padding: 56px 20px 80px;
 
-    .group li { border-bottom: 1px solid var(--line); }
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
-    .group li a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 2px;
-      transition: padding-left 0.15s ease, color 0.15s ease;
-    }
+      line-height: 1.7;
 
-    .group li a::after {
-      content: "\2192";
-      color: var(--accent);
-      opacity: 0;
-      transition: opacity 0.15s ease;
-    }
+      color: var(--ink);
 
-    .group li a:hover,
-    .group li a:focus-visible {
-      padding-left: 8px;
-      text-decoration: none;
-    }
+      background: var(--bg);
 
-    .group li a:hover::after,
-    .group li a:focus-visible::after { opacity: 1; }
+    }
 
-    @media (hover: none) {
-      .group li a::after { opacity: 0.55; }
-    }
 
-    @media (prefers-reduced-motion: reduce) {
-      .typed, .hero-sub { animation: none; opacity: 1; }
-      .cursor { animation: none; }
-    }
-  </style>
+
+    h1 {
+
+      margin: 0 0 32px;
+
+      font-size: 28px;
+
+      letter-spacing: -0.01em;
+
+    }
+
+
+
+    h2 {
+
+      font-size: 18px;
+
+      margin-top: 40px;
+
+    }
+
+
+
+    a {
+
+      color: var(--ink);
+
+      text-decoration: none;
+
+    }
+
+
+
+    a:hover { text-decoration: underline; }
+
+
+
+    a:focus-visible {
+
+      outline: 2px solid var(--accent);
+
+      outline-offset: 3px;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .github-link {
+
+      font-weight: bold;
+
+      color: var(--accent);
+
+    }
+
+
+
+    .terminal-screenshot {
+
+      display: block;
+
+      width: 100%;
+
+      max-width: 600px;
+
+      height: auto;
+
+      margin: 14px 0;
+
+      border-radius: 6px;
+
+      border: 1px solid var(--line);
+
+    }
+
+
+
+    ul { padding-left: 20px; }
+
+
+
+    /* ---------- page routing (unchanged) ---------- */
+
+    .page { display: none; }
+
+    #about { display: block; }
+
+    .page:target { display: block; }
+
+    body:has(.page:target) #about { display: none; }
+
+
+
+    .back {
+
+      color: var(--muted);
+
+      display: inline-block;
+
+      margin-bottom: 30px;
+
+    }
+
+
+
+    /* ---------- home ---------- */
+
+    .hero {
+
+      min-height: 38vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      padding: 40px 0 48px;
+
+    }
+
+
+
+    .hero-title {
+
+      margin: 0;
+
+      font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+      font-size: clamp(34px, 11vw, 60px);
+
+      font-weight: 600;
+
+      letter-spacing: -0.02em;
+
+      line-height: 1.1;
+
+    }
+
+
+
+    .typed {
+
+      display: inline-block;
+
+      overflow: hidden;
+
+      white-space: nowrap;
+
+      vertical-align: bottom;
+
+      width: 11ch;
+
+      animation: type 1.6s steps(11, end) 0.4s both;
+
+    }
+
+
+
+    .cursor {
+
+      display: inline-block;
+
+      width: 0.55ch;
+
+      height: 1em;
+
+      margin-left: 2px;
+
+      vertical-align: -0.12em;
+
+      background: var(--accent);
+
+      animation: blink 1.05s steps(1, end) infinite;
+
+    }
+
+
+
+    .hero-sub {
+
+      margin: 18px 0 0;
+
+      color: var(--muted);
+
+      opacity: 0;
+
+      animation: fade 0.8s ease 2.1s forwards;
+
+    }
+
+
+
+    @keyframes type { from { width: 0; } to { width: 11ch; } }
+
+    @keyframes blink { 50% { opacity: 0; } }
+
+    @keyframes fade { to { opacity: 1; } }
+
+
+
+    .group {
+
+      margin-top: 44px;
+
+    }
+
+
+
+    .group h2 {
+
+      margin: 0 0 6px;
+
+      padding-bottom: 10px;
+
+      border-bottom: 1px solid var(--line);
+
+      font-size: 17px;
+
+    }
+
+
+
+    .group ul {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 0;
+
+    }
+
+
+
+    .group li { border-bottom: 1px solid var(--line); }
+
+
+
+    .group li a {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 12px 2px;
+
+      transition: padding-left 0.15s ease, color 0.15s ease;
+
+    }
+
+
+
+    .group li a::after {
+
+      content: "\2192";
+
+      color: var(--accent);
+
+      opacity: 0;
+
+      transition: opacity 0.15s ease;
+
+    }
+
+
+
+    .group li a:hover,
+
+    .group li a:focus-visible {
+
+      padding-left: 8px;
+
+      text-decoration: none;
+
+    }
+
+
+
+    .group li a:hover::after,
+
+    .group li a:focus-visible::after { opacity: 1; }
+
+
+
+    @media (hover: none) {
+
+      .group li a::after { opacity: 0.55; }
+
+    }
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .typed, .hero-sub { animation: none; opacity: 1; }
+
+      .cursor { animation: none; }
+
+    }
+
+  </style>
+
 </head>
 
+
+
 <body>
-  <main>
 
-    <section class="page" id="about">
-      <div class="hero">
-        <h1 class="hero-title" aria-label="hello world"><span class="typed" aria-hidden="true">hello world</span><span class="cursor" aria-hidden="true"></span></h1>
-        <p class="hero-sub">hey!! im akshat and this personal website has some things im working on and learning about</p>
+  <main>
+
+
+
+    <section class="page" id="about">
+
+      <div class="hero">
+
+        <h1 class="hero-title" aria-label="hello world"><span class="typed" aria-hidden="true">hello world</span><span class="cursor" aria-hidden="true"></span></h1>
+
+        <p class="hero-sub">hey!! im akshat and this personal website has some things im working on and learning about</p>
+
+      </div>
+
+
+
+      <div class="group">
+
+        <h2>projects that ive done</h2>
+
+        <ul>
+           <li><a href="#b4usend">b4uSend</a></li>
+
+          <li><a href="#trading-terminal">trading terminal</a></li>
+
+          <li><a href="#antivirus">simple antivirus</a></li>
+
+          <li><a href="#breadboard-console">breadboard console</a></li>
+
+          <li><a href="#smoke-detector">smoke detector</a></li>
+
+          <li><a href="#parking">smart parking system</a></li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="group">
+
+        <h2>interests and stuff i want to build</h2>
+
+        <ul>
+
+          <li><a href="#veyra">stock prediction ai</a></li>
+
+          <li><a href="#local-ai">local ai device</a></li>
+
+          <li><a href="#architecture">computer architecture</a></li>
+
+          <li><a href="#efficiency">hardware efficiency</a></li>
+
+          <li><a href="#ai">ai and systems</a></li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="veyra" class="page">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>stock prediction ai</h1>
+
+
+
+      <p>
+
+        a market research project im building to study market data and find patterns in it.
+
+      </p>
+
+
+
+      <p>
+
+        im experimenting with things like market regimes and anomaly detection , so essentially it uses indicators as well as market news from around the world at very high frequency to find patterns in the market and predict movement , its a work in progress and im still learning and i wanna make it open source so others can learn too and contribute to it. im also trying to make it run on limited hardware like a raspberry pi or an old laptop so that it can be used by anyone without needing a powerful computer or a cloud server
+
+      </p>
+
+    </section>
+
+
+
+    <section class="page" id="local-ai">
+
+      <a class="back" href="./index.html">← back</a>
+
+      <h1>local ai device</h1>
+
+
+
+      <p>
+
+        its basically an idea for a small device that can run ai locally on limited hardware like a raspberry pi or an old laptop or perhaps an esp32 or something like that. the idea is to make it small, cheap and power efficient while still being useful.
+
+      </p>
+
+
+
+      <p style="margin-top: 16px">
+
+        im mainly interested in making it small, cheap and power efficient but also useful so i was thinking about using it to run a small local ai model for things like basic stock analysis but somehting thats pretty sophisticated and can run on limited hardware this links with the other project i mentioned about stock prediction <a href="#veyra">here</a>
+
+      </p>
+
+    </section>
+
+
+
+    <section id="server" class="page">
+
+      <a class="back" href="./index.html">← back</a>
+
+      <h1>self hosted stuff</h1>
+
+
+
+      <p>
+
+        i run a small linux server for hosting things and testing projects.
+
+      </p>
+
+
+
+      <div>
+
+        <p>
+
+          mostly linux, docker and storing movies and shows and my minecraft servers!!
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="page" id="architecture">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>computer architecture</h1>
+
+
+
+      <p>
+
+        learning more about how computers work underneath the software
+
+      </p>
+
+
+
+      <p>
+
+        like how cpus, gpus and memory work and how they affect performance and efficiency mostly i learn this stuff by myself thru yt videos and reading books
+
+      </p>
+
+    </section>
+
+
+
+    <section id="efficiency" class="page">
+
+      <a class="back" href="./index.html">← back</a>
+
+      <h1>hardware efficiency</h1>
+
+
+
+      <p>
+
+        looking at how hardware can do more without using a ton of power.
+
+      </p>
+
+
+
+      <p>
+
+        especially performance per watt and how hardware choices affect real workloads and how we can make hardware more effecient like i said before im tryna run a local ai model on an esp32 or a raspberry pi so im trying to learn how to modify the esp32 to make them more effecient (raspberry pi too!) and essentially make them run faster and better
+
+      </p>
+
+    </section>
+
+
+
+    <section class="page" id="ai">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>ai and systems</h1>
+
+
+
+      <p>
+
+        learning about what happens when ai runs on actual hardware instead of just using an api
+
+      </p>
+
+
+
+      <p>
+
+        really interested in local models, limited hardware and the software behind them and ai in general how it works and how we can make it better
+
+      </p>
+
+    </section>
+
+
+
+    <section id="parking" class="page">
+
+      <a class="back" href="./index.html">← back</a>
+
+      <h1>smart parking system</h1>
+
+
+
+      <p>
+
+        a smart parking system using an arduino (later an esp32), two ir sensors and a servo motor. it tracks how many parking slots are full or empty and displays the count on the arduino serial monitor. the plan is to later show it on a webpage hosted by the esp32.
+
+      </p>
+
+    </section>
+
+
+
+    <section class="page" id="smoke-detector">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>smoke detector</h1>
+
+
+
+      <p>
+
+        a smoke detector using an mq-2 sensor. first, i used an arduino to show the presence of smoke in a room on the serial monitor. later, i connected it to the internet with an esp32, and eventually added a gsm module to send a text message to my phone.
+
+      </p>
+
+    </section>
+
+
+
+    <section id="breadboard-console" class="page">
+
+      <a class="back" href="./index.html">← back</a>
+
+      <h1>breadboard console</h1>
+
+
+
+      <p>
+
+        a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road. i plan to build more simple games that can run on an arduino, like a simple racing game or snake. right now, im working on a home menu where you can select games and settings, and adding sound with a simple piezo buzzer. for the hardware, ive finished designing a custom case and a pcb for it. this project is one of my personal favourites and one that ill probably remember for a long time since i love gaming too. all the resources for my project, like the pcb design, the .stl file and the code, can be accessed <a href="https://github.com/darthkenobi2407/arduino-game" class="github-link">here</a>.
+
+      </p>
+
+    </section>
+
+
+
+    <section class="page" id="antivirus">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>simple antivirus</h1>
+
+
+
+      <p>
+
+        a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a class="github-link" href="https://github.com/darthkenobi2407/verify-av-">here</a>. it takes a file, calculates its hash and checks whether that hash is in the virustotal database. if it is, the file may be malicious; if it isnt, it hasnt been identified as malicious by that check. its a simple starting point for learning how antivirus software works, and it helped me understand the virustotal api and hash matching for detecting malicious files.
+
+      </p>
+
+    </section>
+
+
+
+    <section id="trading-terminal" class="page">
+
+      <a href="./index.html" class="back">← back</a>
+
+      <h1>trading terminal</h1>
+
+
+
+      <p>i developed a trading terminal which has a lot of features, including:</p>
+
+
+
+      <ul>
+
+        <li>
+
+          <strong>marketwatch:</strong> the default screen where the terminal starts. it monitors crypto coins like btc, sol, ada, doge and eth, tracking current price, algorithm score, signal, entry price, stoploss, takeprofit, unrealized p&amp;l and a mini graph. it also tracks us stocks such as nvda, tsla, appl, msft, amzn, meta, amd, pltr and nflx. this screen also displays open positions, portfolio summary, signal scanner, order flow, account info, scrolling ticker prices and alerts.
+
+
+
+          <img
+
+            class="terminal-screenshot"
+
+            src="./images/trading-marketwatch.png"
+
+            alt="Trading terminal marketwatch screen">
+
+        </li>
+
+
+
+        <li>
+
+          <strong>positions:</strong> shows the symbol, side (long/short), entry price, current price, p&amp;l, stoploss, takeprofit, target and size of trades.
+
+
+
+          <img src="./images/trading-positions.png"
+
+               alt="Trading terminal positions screen"
+
+               class="terminal-screenshot">
+
+        </li>
+
+
+
+        <li>
+
+          <strong>orders:</strong> shows a list of executed trades and pending orders. this feature is not fully implemented yet.
+
+        </li>
+
+
+
+        <li>
+
+          <strong>scanner:</strong> finds assets with the strongest trading signals, separates crypto and equities, and displays active signals.
+
+        </li>
+
+
+
+        <li>
+
+          <strong>world map (personal favourite):</strong> opens a dedicated interactive world map built with jsvectormap. you can select countries to load market information, including the major stock index and its price, gold price, silver price, crude oil price and, most importantly, recent local news.
+
+
+
+          <img
+
+            src="./images/trading-world-map.png"
+
+            class="terminal-screenshot"
+
+            alt="Trading terminal interactive world map">
+
+        </li>
+
+
+
+        <li>
+
+          <strong>feeds:</strong> shows the status of all internal data and services.
+
+        </li>
+
+
+
+        <li>
+
+          <strong>risk:</strong> displays the risk profile, including risk per trade, capital deployment, reserve capital, stoploss, takeprofit, trailing stop and position exposure. this section is still being built.
+
+        </li>
+
+
+
+        <li>
+
+          <strong>news:</strong> a specialized section for news articles from around the world.
+
+        </li>
+
+      </ul>
+
+
+
+      <p>
+
+        this project uses python and the following libraries: yfinance, websockets, requests, pandas and rich, and also many standard libraries including asyncio, time, msvcrt and so on.
+
+      </p>
+
+
+
+      <p>
+
+        you can access the documentation <a href="https://github.com/darthkenobi2407/trading-terminal-beta-" class="github-link">here</a>.
+
+      </p>
+
+    </section>
+
+
+
+  
+
+    <section class="page" id="b4usend">
+      <a class="back" href="./index.html">← back</a>
+      <h1>b4usend — Message Analyzer Extension</h1>
+      <div class="b4usend-content">
+<p>Its a browser extension that checks how your messages might come across before you send them.</p>
+<h2>What is b4usend?</h2>
+<p>Have you ver typed out a message and wondered if it sounds rude, too aggressive, or like just not the way that you meant it?</p>
+<p>So that's why I made b4usend</p>
+<p>It's basically a browser extension that looks at the way a message is written and then tries to figure out its tone before you send it and  it checks things like politeness, friendliness, frustration, hostility, urgency, sarcasm, and a bunch of other communication signals.</p>
+<p>so the main thing I wanted to avoid was making something that just looks for certain words and immediatelyjust labels a message based on them because  like context matters, and the same sentence can come across completely differently depending on how it's used.</p>
+<p>Also like , everything runs locally in the browser and your messages aren't sent to an external API or some server for analysis cos privacy always comes first :)</p>
+<h2>What can it do?</h2>
+<ul>
+<li><p>Analyze messages when you're typing</p>
+</li>
+<li><p>Detect around different communication signals</p>
+</li>
+<li><p>Look at context instead of relying entirely on keywords</p>
+</li>
+<li><p>Give each analysis a confidence score</p>
+</li>
+<li><p>Use a fallback analyzer when needed</p>
+</li>
+<li><p>Work with text inputs, textareas, and content-editable elements</p>
+</li>
+<li><p>Run locally without needing an internet connection for the analysis itself</p>
+</li>
+<li><p>Work with Chrome and other Chromium-based browsers</p>
+</li>
+</ul>
+<p>The signals it checks include  politeness, warmth, friendliness, hostility, frustration, irritation, pressure, urgency, blame, accusation, sarcasm, teasing, directness, formality, casualness, emotional intensity, ambiguity, positivity, and negativity.</p>
+<h2>Getting started</h2>
+<p>so ou'll need node.js and npm installed.</p>
+<p>Clone the repository then open a terminal in the project folder, and run:</p>
+<pre><code>npm install
+npm run build</code></pre>
+<p>when the build finishes:</p>
+<ol>
+<li><p>Open <code>chrome://extensions</code> in Chrome.</p>
+</li>
+<li><p>Enable Developer mode.</p>
+</li>
+<li><p>click <strong>Load unpacked</strong>.</p>
+</li>
+<li><p>Select the <code>dist</code> folder created by the build.</p>
+</li>
+</ol>
+<p>That's it!!! :) You should now be able to use the extension!</p>
+<p>if you wanna make changes to the source code, you can run <code>npm run build</code> again to rebuild it.</p>
+<h2>How does it actually work?</h2>
+<p>The main analyzer is in <code>src/analyzer.js</code>.</p>
+<p>I went with a rule-based approach because I wanted the extension to be pretty  lightweight and  fast and easy to work on instead of  depending on an external service.</p>
+<p>but like it's not meant to be a basic keyword detector.</p>
+<p>The analyzer looks at different parts of a message together like</p>
+<ul>
+<li><p><strong>Context:</strong> The words around a phrase can change its meaning</p>
+</li>
+<li><p><strong>Negation:</strong> A message saying someone isn't angry shouldn't automatically be flagged as angry</p>
+</li>
+<li><p><strong>Sentence structure:</strong> The way a sentence is phrased can affect how it comes acros</p>
+</li>
+<li><p><strong>Hedging:</strong> Words that make a statement less certain or soften the way something is said</p>
+</li>
+<li><p><strong>Punctuation:</strong> Things like repeated exclamation marks can affect the perceived intensity of a message</p>
+</li>
+<li><p><strong>Capitalization:</strong> Excessive capital letters can sometimes indicate emphasis</p>
+</li>
+<li><p><strong>Conversational style:</strong> A casual message and a formal message shouldn't necessarily be judged in the same way</p>
+</li>
+</ul>
+<p>All of  these things contribute to the analysis. One word on its own shouldn't be enough to decide exactly what a person means.</p>
+<p>like for example, being direct doesn't automatically mean being rude right? Similarly, a message containing an angry-sounding word isn't necessarily hostile.</p>
+<p>The goal is basically to make the analysis more useful without pretending it can understand every message perfectly.</p>
+<h2>The signals</h2>
+<p>so here's what the analyzer currently looks at:</p>
+<table><thead><tr><th>Signal</th><th>What it means</th></tr></thead><tbody><tr><td>Politeness</td><td>How polite or courteous the message sounds</td></tr><tr><td>Warmth</td><td>How caring or considerate it comes across</td></tr><tr><td>Friendliness</td><td>How friendly and approachable it sounds</td></tr><tr><td>Hostility</td><td>Whether it comes across as aggressive or antagonistic</td></tr><tr><td>Frustration</td><td>Signs of impatience or dissatisfaction</td></tr><tr><td>Irritation</td><td>Whether the message sounds annoyed</td></tr><tr><td>Pressure</td><td>Whether the message pushes someone to do something</td></tr><tr><td>Urgency</td><td>Whether something sounds time-sensitive</td></tr><tr><td>Blame</td><td>Whether responsibility for something is being assigned</td></tr><tr><td>Accusation</td><td>Whether someone is being accused of doing something wrong</td></tr><tr><td>Sarcasm</td><td>Whether the message might have a sarcastic meaning</td></tr><tr><td>Teasing</td><td>Whether someone is being playfully teased</td></tr><tr><td>Directness</td><td>How directly the message gets its point across</td></tr><tr><td>Formality</td><td>How formal the language is</td></tr><tr><td>Casualness</td><td>How informal the language is</td></tr><tr><td>Emotional intensity</td><td>How strongly emotions are expressed</td></tr><tr><td>Ambiguity</td><td>How unclear or uncertain the message is</td></tr><tr><td>Positivity</td><td>How positive the message comes across</td></tr><tr><td>Negativity</td><td>How negative the message comes across</td></tr></tbody></table>
+<p>Each signal gets a value between <code>0.0</code> and <code>1.0</code>.</p>
+<ul>
+<li><p><code>0.0</code> means that the signal wasn't detected.</p>
+</li>
+<li><p><code>0.5</code> means the signal is present to a   moderate degree.</p>
+</li>
+<li><p><code>1.0</code> means the signal is  strong.</p>
+</li>
+</ul>
+<p>The analyzer also gives a confidence score between <code>0.0</code> and <code>1.0</code>whcih  represents how reliable the overall analysis is expected to be.</p>
+<p>These values aren't suppoesd to be absolute judgments about what a person  intended , they're estimates based on the message itself.</p>
+<h2>Using the analyzer</h2>
+<p>The main analyzer is available in <code>src/analyzer.js</code>.</p>
+<p>for example:</p>
+<p>```javascript</p>
+<p>import { analyzeMessage } from './src/analyzer.js';</p>
+<p>const result = analyzeMessage(</p>
+<p>  'Can you send me the report?'</p>
+<p>);</p>
+<p>console.log(result);</p>
+<p>```</p>
+<p>The extension can also expose the analyzer globally when loaded in the appropriate extension context:</p>
+<p>```javascript</p>
+<p>window.b4usendAnalyzer.analyzeMessage(</p>
+<p>  'Can you send me the report?'</p>
+<p>);</p>
+<p>```</p>
+<p>The result contains the detected signals and the confidence score.</p>
+<p>also make sure the import and function names match the exports in your current version of <code>src/analyzer.js</code>.</p>
+<h2>Why not just use an ML model?</h2>
+<p>I did actuallt consider using a small machine learning model at first but I wanted to start with something that was fast, lightweight, and didn't need to download a model or send anything over the internet.</p>
+<p>Using rules also makes it easier to understand why a signal was triggered and change the logic when something doesn't rly work as expected.</p>
+<p>The main reasons for going with this approach were:</p>
+<ul>
+<li><p><strong>Privacy:</strong> Messages stay on the device. (most important)</p>
+</li>
+<li><p><strong>Speed:</strong> Analysis doesn't depend on network requests.</p>
+</li>
+<li><p><strong>Control:</strong> The rules can be adjusted as the project improves.</p>
+</li>
+<li><p><strong>Debugging:</strong> It's easier to figure out why a particular result was produced.</p>
+</li>
+<li><p><strong>Offline support:</strong> The analyzer doesn't need an internet connection.</p>
+</li>
+</ul>
+<p>i know a rule-based system has its limits but the point isn't that this approach is perfect ,it's that it makes sense for a lightweight browser extension where privacy and speed are most important.</p>
+<h2>Performance</h2>
+<p>The analyzer is designed to be fast enough to run while you're typing, without making the browser feel slow</p>
+<p>The current reported performance figures are:</p>
+<ul>
+<li><p>Initialization: around a 100 ms.</p>
+</li>
+<li><p>First analysis: around 30 ms.</p>
+</li>
+<li><p>Subsequent analyses: around 15–50 ms.</p>
+</li>
+<li><p>Typing debounce: 500 ms.</p>
+</li>
+<li><p>Target memory usage: under 5 MB.</p>
+</li>
+</ul>
+<p>but these figures should be treated as benchmarks rather than guarantees cos actual performance depends on the device and browser.</p>
+<h2>Privacy</h2>
+<p>This is one of the main things I wanted to get right.</p>
+<p>b4usend is designed to analyze messages locally, without sending their contents to an external service.</p>
+<ul>
+<li><p>No external API calls for message analysis.</p>
+</li>
+<li><p>No sending message content to a remote server.</p>
+</li>
+<li><p>No built-in analytics or tracking.</p>
+</li>
+<li><p>No internet connection required for the core analysis.</p>
+</li>
+</ul>
+<p>The extension is intended to work without your messages leaving your device for analysis.</p>
+<h2>Testing</h2>
+<p>To run the tests, use:</p>
+<p>```bash</p>
+<p>npm test</p>
+<p>```</p>
+<p>the test suite covers basic functionality, contextual understanding, edge cases, relationships between signals, and performance.</p>
+<p>The existing test report indicates that the requirements tests, contextual tests, signal relationship checks, and performance benchmarks passed , uou can run the suite yourself to verify the results against the current code.</p>
+<h2>Limitations</h2>
+<p>b4usend isn't going to get every message right(for now), and that's something i wanna be clear about.</p>
+<p>A lot of communication depends on things that aren't present in a single message.</p>
+<p>For example:</p>
+<ul>
+<li><p><strong>Sarcasm:</strong> It's often  difficult for a rule based algo to tell whether someone is being serious without knowing the conversation.</p>
+</li>
+<li><p><strong>Cultural differences:</strong> The same phrase can mean different things to different peoplein different places</p>
+</li>
+<li><p><strong>Short messages:</strong> Something like &quot;okay&quot; doesn't rly give the analyzer much to work with</p>
+</li>
+<li><p><strong>Irony:</strong> It's not always easy to distinguish irony from sarcasm</p>
+</li>
+<li><p><strong>Technical language:</strong> Unusual wording or like industry-specific terms can affect the results too</p>
+</li>
+<li><p><strong>False positives:</strong> Some messages will inevitably be interpreted incorrectly</p>
+</li>
+</ul>
+<p>That's why the analyzer uses confidence scores and tries to be conservative when the context isn't clear.</p>
+<p>It's there to give you another perspective on a message, not to tell you exactly what someone thinks or how they're going to react.</p>
+<h2>so what's next?</h2>
+<p>Theresa few things I'd like to explore as this project develops:</p>
+<ul>
+<li><p>Trying to use  a small local ML model to improve contextual understanding</p>
+</li>
+<li><p>Letting the users adjust how strongly different signals are weighted</p>
+</li>
+<li><p>Adding a conversation history so earlier messages can provide more context</p>
+</li>
+<li><p>Tuning the analyzer for different situations, such as professional emails and casual conversations</p>
+</li>
+<li><p>Adding support for more languages</p>
+</li>
+</ul>
+<p>these are some cool ideas i wanna try out later</p>
+<h2>Try it out!!!!</h2>
+<p>You can also check out the web pages for b4usend which are hosted on vercel</p>
+<ul>
+<li><p><strong><a href="https://b4usend-web.vercel.app/popup.html">Popup</a></strong> — Open the popup interface which is essentially the analyzer in a html form</p>
+</li>
+<li><p><strong><a href="https://b4usend-web.vercel.app/options.html">Options</a></strong> — Open the options page which lets you toggle around with settings</p>
+</li>
+</ul>
+<h2>Finally</h2>
+<p>The idea behind b4usend is pretty simple: sometimes it's not just about what you say, but how you say it.</p>
+<p>I wanted to build something that could help pick up on that without making the whole process complicated or slowing things down or compromising privacy</p>
+<p>It's still something that can be improved definietly  but this is the approach I'm taking with it for now</p>
+<p><strong>Built with JavaScript, contextual rules, and a focus on privacy.</strong></p>
+
+        <hr>
+        <p>try download it <a class="github-link" href="https://b4usend-web.vercel.app/newuser.html" target="_blank" rel="noopener noreferrer">click here</a></p>
+        <h2>try it out below:</h2>
+        <iframe class="b4usend-embed" src="https://b4usend-web.vercel.app/popup.html" title="Try the b4usend message analyzer" loading="lazy"></iframe>
       </div>
-
-      <div class="group">
-        <h2>projects that ive done</h2>
-        <ul>
-          <li><a href="#trading-terminal">trading terminal</a></li>
-          <li><a href="#antivirus">simple antivirus</a></li>
-          <li><a href="#breadboard-console">breadboard console</a></li>
-          <li><a href="#smoke-detector">smoke detector</a></li>
-          <li><a href="#parking">smart parking system</a></li>
-        </ul>
-      </div>
-
-      <div class="group">
-        <h2>interests and stuff i want to build</h2>
-        <ul>
-          <li><a href="#veyra">stock prediction ai</a></li>
-          <li><a href="#local-ai">local ai device</a></li>
-          <li><a href="#architecture">computer architecture</a></li>
-          <li><a href="#efficiency">hardware efficiency</a></li>
-          <li><a href="#ai">ai and systems</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="veyra" class="page">
-      <a href="./index.html" class="back">← back</a>
-      <h1>stock prediction ai</h1>
-
-      <p>
-        a market research project im building to study market data and find patterns in it.
-      </p>
-
-      <p>
-        im experimenting with things like market regimes and anomaly detection , so essentially it uses indicators as well as market news from around the world at very high frequency to find patterns in the market and predict movement , its a work in progress and im still learning and i wanna make it open source so others can learn too and contribute to it. im also trying to make it run on limited hardware like a raspberry pi or an old laptop so that it can be used by anyone without needing a powerful computer or a cloud server
-      </p>
-    </section>
-
-    <section class="page" id="local-ai">
-      <a class="back" href="./index.html">← back</a>
-      <h1>local ai device</h1>
-
-      <p>
-        its basically an idea for a small device that can run ai locally on limited hardware like a raspberry pi or an old laptop or perhaps an esp32 or something like that. the idea is to make it small, cheap and power efficient while still being useful.
-      </p>
-
-      <p style="margin-top: 16px">
-        im mainly interested in making it small, cheap and power efficient but also useful so i was thinking about using it to run a small local ai model for things like basic stock analysis but somehting thats pretty sophisticated and can run on limited hardware this links with the other project i mentioned about stock prediction <a href="#veyra">here</a>
-      </p>
-    </section>
-
-    <section id="server" class="page">
-      <a class="back" href="./index.html">← back</a>
-      <h1>self hosted stuff</h1>
-
-      <p>
-        i run a small linux server for hosting things and testing projects.
-      </p>
-
-      <div>
-        <p>
-          mostly linux, docker and storing movies and shows and my minecraft servers!!
-        </p>
-      </div>
-    </section>
-
-    <section class="page" id="architecture">
-      <a href="./index.html" class="back">← back</a>
-      <h1>computer architecture</h1>
-
-      <p>
-        learning more about how computers work underneath the software
-      </p>
-
-      <p>
-        like how cpus, gpus and memory work and how they affect performance and efficiency mostly i learn this stuff by myself thru yt videos and reading books
-      </p>
-    </section>
-
-    <section id="efficiency" class="page">
-      <a class="back" href="./index.html">← back</a>
-      <h1>hardware efficiency</h1>
-
-      <p>
-        looking at how hardware can do more without using a ton of power.
-      </p>
-
-      <p>
-        especially performance per watt and how hardware choices affect real workloads and how we can make hardware more effecient like i said before im tryna run a local ai model on an esp32 or a raspberry pi so im trying to learn how to modify the esp32 to make them more effecient (raspberry pi too!) and essentially make them run faster and better
-      </p>
-    </section>
-
-    <section class="page" id="ai">
-      <a href="./index.html" class="back">← back</a>
-      <h1>ai and systems</h1>
-
-      <p>
-        learning about what happens when ai runs on actual hardware instead of just using an api
-      </p>
-
-      <p>
-        really interested in local models, limited hardware and the software behind them and ai in general how it works and how we can make it better
-      </p>
-    </section>
-
-    <section id="parking" class="page">
-      <a class="back" href="./index.html">← back</a>
-      <h1>smart parking system</h1>
-
-      <p>
-        a smart parking system using an arduino (later an esp32), two ir sensors and a servo motor. it tracks how many parking slots are full or empty and displays the count on the arduino serial monitor. the plan is to later show it on a webpage hosted by the esp32.
-      </p>
-    </section>
-
-    <section class="page" id="smoke-detector">
-      <a href="./index.html" class="back">← back</a>
-      <h1>smoke detector</h1>
-
-      <p>
-        a smoke detector using an mq-2 sensor. first, i used an arduino to show the presence of smoke in a room on the serial monitor. later, i connected it to the internet with an esp32, and eventually added a gsm module to send a text message to my phone.
-      </p>
-    </section>
-
-    <section id="breadboard-console" class="page">
-      <a class="back" href="./index.html">← back</a>
-      <h1>breadboard console</h1>
-
-      <p>
-        a breadboard console built with an arduino, a 16x2 alphanumeric lcd (later replaced with a 2-inch oled display), a breadboard and a couple of buttons. i built two games for it, similar to flappy bird and crossy road. i plan to build more simple games that can run on an arduino, like a simple racing game or snake. right now, im working on a home menu where you can select games and settings, and adding sound with a simple piezo buzzer. for the hardware, ive finished designing a custom case and a pcb for it. this project is one of my personal favourites and one that ill probably remember for a long time since i love gaming too. all the resources for my project, like the pcb design, the .stl file and the code, can be accessed <a href="https://github.com/darthkenobi2407/arduino-game" class="github-link">here</a>.
-      </p>
-    </section>
-
-    <section class="page" id="antivirus">
-      <a href="./index.html" class="back">← back</a>
-      <h1>simple antivirus</h1>
-
-      <p>
-        a very simple antivirus that uses hash matching with the virustotal api. it's pretty simple, but cool nevertheless. you can check it out <a class="github-link" href="https://github.com/darthkenobi2407/verify-av-">here</a>. it takes a file, calculates its hash and checks whether that hash is in the virustotal database. if it is, the file may be malicious; if it isnt, it hasnt been identified as malicious by that check. its a simple starting point for learning how antivirus software works, and it helped me understand the virustotal api and hash matching for detecting malicious files.
-      </p>
-    </section>
-
-    <section id="trading-terminal" class="page">
-      <a href="./index.html" class="back">← back</a>
-      <h1>trading terminal</h1>
-
-      <p>i developed a trading terminal which has a lot of features, including:</p>
-
-      <ul>
-        <li>
-          <strong>marketwatch:</strong> the default screen where the terminal starts. it monitors crypto coins like btc, sol, ada, doge and eth, tracking current price, algorithm score, signal, entry price, stoploss, takeprofit, unrealized p&amp;l and a mini graph. it also tracks us stocks such as nvda, tsla, appl, msft, amzn, meta, amd, pltr and nflx. this screen also displays open positions, portfolio summary, signal scanner, order flow, account info, scrolling ticker prices and alerts.
-
-          <img
-            class="terminal-screenshot"
-            src="./images/trading-marketwatch.png"
-            alt="Trading terminal marketwatch screen">
-        </li>
-
-        <li>
-          <strong>positions:</strong> shows the symbol, side (long/short), entry price, current price, p&amp;l, stoploss, takeprofit, target and size of trades.
-
-          <img src="./images/trading-positions.png"
-               alt="Trading terminal positions screen"
-               class="terminal-screenshot">
-        </li>
-
-        <li>
-          <strong>orders:</strong> shows a list of executed trades and pending orders. this feature is not fully implemented yet.
-        </li>
-
-        <li>
-          <strong>scanner:</strong> finds assets with the strongest trading signals, separates crypto and equities, and displays active signals.
-        </li>
-
-        <li>
-          <strong>world map (personal favourite):</strong> opens a dedicated interactive world map built with jsvectormap. you can select countries to load market information, including the major stock index and its price, gold price, silver price, crude oil price and, most importantly, recent local news.
-
-          <img
-            src="./images/trading-world-map.png"
-            class="terminal-screenshot"
-            alt="Trading terminal interactive world map">
-        </li>
-
-        <li>
-          <strong>feeds:</strong> shows the status of all internal data and services.
-        </li>
-
-        <li>
-          <strong>risk:</strong> displays the risk profile, including risk per trade, capital deployment, reserve capital, stoploss, takeprofit, trailing stop and position exposure. this section is still being built.
-        </li>
-
-        <li>
-          <strong>news:</strong> a specialized section for news articles from around the world.
-        </li>
-      </ul>
-
-      <p>
-        this project uses python and the following libraries: yfinance, websockets, requests, pandas and rich, and also many standard libraries including asyncio, time, msvcrt and so on.
-      </p>
-
-      <p>
-        you can access the documentation <a href="https://github.com/darthkenobi2407/trading-terminal-beta-" class="github-link">here</a>.
-      </p>
     </section>
 
   </main>
+
 </body>
+
 </html>
